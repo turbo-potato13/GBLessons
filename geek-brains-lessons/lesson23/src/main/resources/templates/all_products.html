@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Products page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h3 align="center">Список Продуктов</h3>
+    <br>
+    <span th:unless="${products.size() > 0}">Продуктов пока нет, попробуйте добавить новый</span>
+    <table class="table table-striped" th:if="${products.size() > 0}">
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>Название</td>
+            <td>Цена</td>
+            <td>Действия</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p : ${products}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.title}"></td>
+            <td th:text="${p.price}"></td>
+            <td>
+                <a class="btn btn-danger" th:href="@{'/products/remove/' + ${p.id}}">Удалить</a>
+                <a class="btn btn-secondary" th:href="@{'/products/edit/' + ${p.id}}">Редактировать</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <span th:text="'Всего продуктов: ' + ${@productService.getProducts().size()}"/>
+
+    <br>
+    <br>
+    <h4>Добавить коробку:</h4>
+    <form th:action="@{'/products/add'}" method="post">
+        <div class="form-group">
+            <label>Название</label>
+            <input type="text" class="form-control form-control-sm" name="title">
+        </div>
+        <div class="form-group">
+            <label>Цена</label>
+            <input type="number" class="form-control form-control-sm" name="price">
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+    <br>
+    <br>
+    <a class="btn btn-info" th:href="@{'/'}">Навигация</a>
+</div>
+
+
+</body>
+</html>
