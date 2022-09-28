@@ -1,4 +1,4 @@
-package lesson25.beans;
+package com.vtb.kortunov.lesson25.beans;
 
 import com.vtb.kortunov.lesson25.services.BookService;
 import lombok.AllArgsConstructor;

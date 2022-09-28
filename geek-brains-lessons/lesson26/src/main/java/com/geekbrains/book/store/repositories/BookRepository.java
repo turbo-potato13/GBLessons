@@ -1,4 +1,4 @@
-package store.repositories;
+package com.geekbrains.book.store.repositories;
 
 import com.geekbrains.book.store.entities.Book;
 import com.geekbrains.book.store.entities.dto.BookDto;

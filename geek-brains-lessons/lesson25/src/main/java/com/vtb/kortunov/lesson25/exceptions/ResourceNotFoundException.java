@@ -1,4 +1,4 @@
-package lesson25.exceptions;
+package com.vtb.kortunov.lesson25.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

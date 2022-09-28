@@ -1,7 +1,8 @@
-package lesson25.entities;
+package com.vtb.kortunov.lesson25.entities;
 
 import lombok.Data;
 
+import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
@@ -24,7 +25,7 @@ public class User {
 
     @ManyToMany
     @JoinTable(name = "users_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Collection<Role> roles;
 }

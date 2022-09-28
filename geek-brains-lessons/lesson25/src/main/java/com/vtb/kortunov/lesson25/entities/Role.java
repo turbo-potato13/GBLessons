@@ -1,5 +1,6 @@
-package lesson25.entities;
+package com.vtb.kortunov.lesson25.entities;
 
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity

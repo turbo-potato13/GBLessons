@@ -1,4 +1,4 @@
-package store.controllers.rest;
+package com.geekbrains.book.store.controllers.rest;
 
 import com.geekbrains.book.store.entities.Genre;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GenreController {
 
     @GetMapping
-    public Genre[] getGenres(){
+    public Genre[] getGenres() {
         return Genre.values();
     }
 }

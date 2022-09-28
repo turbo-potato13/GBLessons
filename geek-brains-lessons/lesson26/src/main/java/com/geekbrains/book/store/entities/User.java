@@ -1,4 +1,4 @@
-package store.entities;
+package com.geekbrains.book.store.entities;
 
 import lombok.Data;
 
@@ -25,7 +25,7 @@ public class User {
 
     @ManyToMany
     @JoinTable(name = "users_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Collection<Role> roles;
 }

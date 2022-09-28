@@ -1,4 +1,4 @@
-package store.entities;
+package com.geekbrains.book.store.entities;
 
 import lombok.Data;
 

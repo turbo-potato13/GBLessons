@@ -1,4 +1,4 @@
-package lesson25.utils;
+package com.vtb.kortunov.lesson25.utils;
 
 import com.vtb.kortunov.lesson25.entities.Book;
 import com.vtb.kortunov.lesson25.repositories.specifications.BookSpecifications;
@@ -10,7 +10,7 @@ import java.util.Map;
 @Getter
 public class BookFilter {
     private Specification<Book> spec;
-    private String filterParams;
+    private final String filterParams;
 
     public BookFilter(Map<String, String> params) {
         spec = Specification.where(null);

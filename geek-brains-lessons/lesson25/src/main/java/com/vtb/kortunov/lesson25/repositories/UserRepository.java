@@ -1,4 +1,4 @@
-package lesson25.repositories;
+package com.vtb.kortunov.lesson25.repositories;
 
 import com.vtb.kortunov.lesson25.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;

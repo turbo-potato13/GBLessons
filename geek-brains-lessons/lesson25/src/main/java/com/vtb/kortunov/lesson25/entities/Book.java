@@ -1,10 +1,9 @@
-package lesson25.entities;
+package com.vtb.kortunov.lesson25.entities;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -12,13 +11,6 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 public class Book {
-    @AllArgsConstructor
-    @Getter
-    public enum Genre {
-        FANTASY("Фэнтези"), FICTION("Фантастика"), DETECTIVE("Детектив");
-
-        private String rus;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,4 +1,4 @@
-package store.beans;
+package com.geekbrains.book.store.beans;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;

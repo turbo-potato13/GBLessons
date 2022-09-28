@@ -1,4 +1,4 @@
-package lesson25.configs;
+package com.vtb.kortunov.lesson25.configs;
 
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -17,27 +17,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/profile/**").authenticated()
-                .antMatchers("/admin/**").hasAnyRole("ADMIN", "SUPERADMIN") // ROLE_ADMIN, ROLE_SUPERADMIN
-                .anyRequest().permitAll()
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .loginProcessingUrl("/authenticate")
-                .and()
-                .logout().logoutSuccessUrl("/");
-
-
-        //                .and()
-//                .csrf().disable()
-
-//                .loginPage("/login") // default GET /login
-//                .loginProcessingUrl("/authenticateTheUser") // default: POST /login
-//                .permitAll()
-//                .and()
-//                .logout()
-//                .logoutSuccessUrl("/")
-//                .permitAll();
+            .antMatchers("/profile/**").authenticated()
+            .antMatchers("/admin/**").hasAnyRole("ADMIN", "SUPERADMIN")
+            .anyRequest().permitAll()
+            .and()
+            .formLogin()
+            .loginPage("/login")
+            .loginProcessingUrl("/authenticate")
+            .and()
+            .logout().logoutSuccessUrl("/");
     }
 
     @Bean

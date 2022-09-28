@@ -1,4 +1,4 @@
-package lesson25;
+package com.vtb.kortunov.lesson25;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

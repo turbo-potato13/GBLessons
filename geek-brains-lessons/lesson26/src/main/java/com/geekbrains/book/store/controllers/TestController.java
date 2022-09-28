@@ -1,4 +1,4 @@
-package store.controllers;
+package com.geekbrains.book.store.controllers;
 
 import com.geekbrains.book.store.entities.Test;
 import com.geekbrains.book.store.repositories.TestRepository;

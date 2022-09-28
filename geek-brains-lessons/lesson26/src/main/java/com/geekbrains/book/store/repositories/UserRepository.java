@@ -1,4 +1,4 @@
-package store.repositories;
+package com.geekbrains.book.store.repositories;
 
 import com.geekbrains.book.store.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;

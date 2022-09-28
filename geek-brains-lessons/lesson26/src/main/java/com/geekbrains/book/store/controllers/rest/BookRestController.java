@@ -1,4 +1,4 @@
-package store.controllers.rest;
+package com.geekbrains.book.store.controllers.rest;
 
 import com.geekbrains.book.store.entities.Book;
 import com.geekbrains.book.store.entities.dto.BookDto;
@@ -21,11 +21,9 @@ public class BookRestController {
 
     @GetMapping
     public Page<Book> getAllBooks(@RequestParam(name = "p", defaultValue = "1") Integer pageIndex,
-                                         @RequestParam MultiValueMap<String, String> params) {
+                                  @RequestParam MultiValueMap<String, String> params) {
         BookFilter bookFilter = new BookFilter(params);
-        Page<Book> page = bookService.findAll(bookFilter.getSpec(), pageIndex - 1, 5);
-        
-        return page;
+        return bookService.findAll(bookFilter.getSpec(), pageIndex - 1, 5);
     }
 
     @GetMapping("/dtos")
@@ -64,6 +62,5 @@ public class BookRestController {
     public void deleteById(@PathVariable Long id) {
         bookService.deleteById(id);
     }
-
 
 }

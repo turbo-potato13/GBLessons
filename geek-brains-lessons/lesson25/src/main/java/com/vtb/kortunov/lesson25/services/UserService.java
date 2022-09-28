@@ -1,4 +1,4 @@
-package lesson25.services;
+package com.vtb.kortunov.lesson25.services;
 
 import com.vtb.kortunov.lesson25.entities.Role;
 import com.vtb.kortunov.lesson25.entities.User;

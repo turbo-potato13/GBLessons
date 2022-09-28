@@ -1,4 +1,4 @@
-package store.controllers;
+package com.geekbrains.book.store.controllers;
 
 import com.geekbrains.book.store.entities.User;
 import com.geekbrains.book.store.services.UserService;
@@ -18,7 +18,7 @@ public class ProfileController {
 
     @GetMapping
     public String showProfilePage(Model model, Principal principal) {
-        User user = userService.findByUsername(principal.getName()).get();
+        User user = userService.findByUsername(principal.getName()).orElseThrow();
         model.addAttribute("fullName", user.getUsername());
         model.addAttribute("email", user.getEmail());
         return "profile-page";

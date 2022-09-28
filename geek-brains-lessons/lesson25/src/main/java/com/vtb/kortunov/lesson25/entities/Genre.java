@@ -1,4 +1,4 @@
-package lesson25.entities;
+package com.vtb.kortunov.lesson25.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package store.services;
+package com.geekbrains.book.store.services;
 
 import com.geekbrains.book.store.entities.Role;
 import com.geekbrains.book.store.entities.User;
